@@ -1,0 +1,14 @@
+https://www.nuget.org/packages/HtmlAgilityPack/
+
+
+установка HtmlAgilityPack
+
+1. Elisy-Net-Bridge-SDK-4-0-8
+2. nuget.exe install HtmlAgilityPack -Version 1.6.17
+
+
+примеры
+https://msdn.microsoft.com/ru-ru/library/ms256086(v=vs.120).aspx
+https://infostart.ru/public/415439/
+
+http://docs.workflowgen.com/wfgmy/v240/html/820c120d-d454-2240-183f-8f7b1d6ff535.htm
