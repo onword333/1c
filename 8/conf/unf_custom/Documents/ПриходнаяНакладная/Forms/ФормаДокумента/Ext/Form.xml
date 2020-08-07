@@ -3,26 +3,45 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<InputField name="Номер" id="1">
-			<DataPath>Объект.Number</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="Дата" id="4">
-			<DataPath>Объект.Date</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="Организация" id="7">
-			<DataPath>Объект.Организация</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
-		</InputField>
+		<UsualGroup name="Группа2" id="52">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="54">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<InputField name="Организация" id="7">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Склад" id="59">
+					<DataPath>Объект.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Запасы" id="10">
 			<Representation>List</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>

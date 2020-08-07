@@ -133,6 +133,7 @@
 			<Catalog>Организации</Catalog>
 			<Catalog>СтавкиНДС</Catalog>
 			<Catalog>Склады</Catalog>
+			<Catalog>КлассификаторЕдиницИзмерения</Catalog>
 			<Document>ПриходнаяНакладная</Document>
 			<DocumentNumerator>ПерсонифицированныйУчет</DocumentNumerator>
 		</ChildObjects>
