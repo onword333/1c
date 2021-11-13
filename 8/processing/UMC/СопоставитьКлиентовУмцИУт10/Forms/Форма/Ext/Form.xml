@@ -1,6 +1,182 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Клиенты" id="1">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Клиенты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КлиентыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="КлиентыКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="КлиентыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="КлиентыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="КлиентыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КлиентыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="КлиентыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КлиентыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="КлиентыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КлиентыНомерСтроки" id="14">
+					<DataPath>Объект.Клиенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="КлиентыНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="КлиентыКлиент" id="17">
+					<DataPath>Объект.Клиенты.Клиент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО клиента УМЦ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="КлиентыКлиентКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КлиентыКлиентРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="КлиентыКод" id="31">
+					<DataPath>Объект.Клиенты.Код</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код клиента УМЦ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыКодКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КлиентыКодРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<CheckBoxField name="КлиентыКлиентПометкаУдаления" id="43">
+					<DataPath>Объект.Клиенты.Клиент.DeletionMark</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий статус УМЦ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентыКлиентПометкаУдаленияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КлиентыКлиентПометкаУдаленияРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<InputField name="КлиентыКлиентУТ10" id="20">
+					<DataPath>Объект.Клиенты.КлиентУТ10</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО клиента УТ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыКлиентУТ10КонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КлиентыКлиентУТ10РасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="КлиентыКлиентыУТ10Код" id="23">
+					<DataPath>Объект.Клиенты.КлиентыУТ10Код</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код клиента УТ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыКлиентыУТ10КодКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КлиентыКлиентыУТ10КодРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="КлиентыКлиентУт10ПометкаУдаления" id="34">
+					<DataPath>Объект.Клиенты.КлиентУт10ПометкаУдаления</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления УТ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентыКлиентУт10ПометкаУдаленияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="КлиентыКлиентУт10ПометкаУдаленияРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<InputField name="КлиентыЗаказПокупателяУТ10" id="37">
+					<DataPath>Объект.Клиенты.ЗаказПокупателяУТ10</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во заказов УТ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыЗаказПокупателяУТ10КонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КлиентыЗаказПокупателяУТ10РасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="КлиентыДокументПродажиУТ10" id="40">
+					<DataPath>Объект.Клиенты.ДокументПродажиУТ10</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во продаж УТ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыДокументПродажиУТ10КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КлиентыДокументПродажиУТ10РасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<CheckBoxField name="КлиентыПометитьНаУдалениеВУТ" id="46">
+					<DataPath>1/0:ba15970c-1263-4d23-a427-95fb94ac87ff/1:5bdad865-f2c5-434b-8041-ba4aad3b6687</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентыПометитьНаУдалениеВУТКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="КлиентыПометитьНаУдалениеВУТРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="Группа1" id="51">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<Button name="СопоставитьКлиентовСУТ10" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СопоставитьКлиентовСУТ10</CommandName>
+					<ExtendedTooltip name="СопоставитьКлиентовСУТ10РасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="УстановитьПометкуУдаленияВУТ" id="49">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УстановитьПометкуУдаленияВУТ</CommandName>
+					<ExtendedTooltip name="УстановитьПометкуУдаленияВУТРасширеннаяПодсказка" id="50"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
@@ -9,4 +185,36 @@
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СопоставитьКлиентовСУТ10" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить клиентов УМЦ и УТ10</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставить клиентов СУТ10</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СопоставитьКлиентовСУТ10</Action>
+		</Command>
+		<Command name="УстановитьПометкуУдаленияВУТ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку удаления В УТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку удаления ВУТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПометкуУдаленияВУТ</Action>
+		</Command>
+	</Commands>
 </Form>
