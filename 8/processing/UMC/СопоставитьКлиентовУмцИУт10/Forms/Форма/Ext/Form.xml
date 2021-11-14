@@ -76,7 +76,6 @@
 					<ExtendedTooltip name="КлиентыКодРасширеннаяПодсказка" id="33"/>
 				</InputField>
 				<CheckBoxField name="КлиентыКлиентПометкаУдаления" id="43">
-					<DataPath>Объект.Клиенты.Клиент.DeletionMark</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
